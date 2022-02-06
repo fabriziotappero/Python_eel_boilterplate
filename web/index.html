@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Eel Boilerplate</title>
+        <!-- DOC: https://getbootstrap.com/docs/4.0/getting-started/introduction/ -->
+        <link href="bootstrap.css" rel="stylesheet"/>
+        <script src="jquery.js"></script>
+        <script src="bootstrap.js" ></script>
+        <script src="/eel.js"></script>
+        <script>
+            eel.expose(py_says);
+            function py_says(x){
+                $(".myClass p").html('Receiving '+x);
+                //console.log(x);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container m3">
+            &nbsp;
+            <div class="row">
+                <div class="col-sm-6 gap-1 bg-light m-2">
+                    <button onclick="eel.js_says(23.5)" type="button" class="btn btn-primary">Execute</button>
+                </div>
+                <div class="col-sm-4 bg-danger text-white myClass"><p></p></div>
+            </div>
+        </div>
+    </body>
+</html>
