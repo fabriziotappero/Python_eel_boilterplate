@@ -9,9 +9,9 @@
         <script src="bootstrap.js" ></script>
         <script src="/eel.js"></script>
         <script>
-            eel.expose(py_says);
-            function py_says(x){
-                $(".myClass p").html('Receiving '+x);
+            eel.expose(talk_to_gui);
+            function talk_to_gui(x){
+                $(".myClass p").html('Printing: '+x);
                 //console.log(x);
             }
         </script>
@@ -21,7 +21,7 @@
             &nbsp;
             <div class="row">
                 <div class="col-sm-6 gap-1 bg-light m-2">
-                    <button onclick="eel.js_says(23.5)" type="button" class="btn btn-primary">Execute</button>
+                    <button onclick="eel.talk_to_py(23.5)" type="button" class="btn btn-primary">Talking</button>
                 </div>
                 <div class="col-sm-4 bg-danger text-white myClass"><p></p></div>
             </div>
